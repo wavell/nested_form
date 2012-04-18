@@ -45,6 +45,7 @@ jQuery(function($) {
       $(link).closest("form")
         .trigger({ type: 'nested:fieldAdded', field: field })
         .trigger({ type: 'nested:fieldAdded:' + assoc, field: field });
+      $(field).find('input:first').focus();  
       return false;
     },
     insertFields: function(content, assoc, link) {
